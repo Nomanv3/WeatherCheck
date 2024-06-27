@@ -15,8 +15,8 @@ const Nav = (props) => {
   };
 
   return (
-    <div className="w-full h-10 mb-5 rounded bg-red-400 flex items-center p-2 justify-between ">
-        <h1>Logo</h1>
+    <div className={`w-full h-10 mb-5 rounded ${dark? 'bg-zinc-100':'bg-zinc-700'} flex items-center p-2 justify-between` }>
+        <h1 className={`text-2xl font-bold ${dark? 'text-black':'text-white'}`}>Weather</h1>
       {dark ? (
         <MdLightMode
           onClick={setLight}

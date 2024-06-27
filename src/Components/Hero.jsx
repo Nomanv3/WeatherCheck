@@ -75,12 +75,12 @@ const Hero = () => {
     };
 
     return (
-        <div className={`h-screen w-full ${data ? "bg-blue-100" : "bg-zinc-600"} p-5`}>
-            <Nav getdata={getdata} />
+      <div className={`h-screen w-full ${data ? "bg-zinc-200" : "bg-zinc-600"} p-5`}>
+                    <Nav getdata={getdata} />
 
             <div className="bg-red-400 w-full flex items-center justify-center">
-                <div className={`flex items-center justify-center w-full ${data ? "bg-blue-100" : "bg-zinc-600"}`}>
-                    <div className="flex">
+                <div className={`flex items-center justify-center w-full ${data ? "bg-zinc-200" : "bg-zinc-600"}`}>
+                    <div className="flex bg-white rounded-lg overflow-hidden items-center" >
                         <Autosuggest
                             theme={{
                                 input: "bg-white w-70 focus:outline-none rounded p-1 font-semibold",
@@ -92,13 +92,13 @@ const Hero = () => {
                             renderSuggestion={renderSuggestion}
                             inputProps={inputProps}
                         />
-                        <CgSearch className="bg-white text-3xl rounded-sm" onClick={searcher} />
+                        <CgSearch className="bg-white text-2xl rounded-sm w-full" onClick={searcher} />
                     </div>
                 </div>
             </div>
 
             <div className="h-[80vh] w-full p-10 flex gap-3 items-center justify-center">
-                {apidata && <Cards weatherinfo={apidata} />}
+                {apidata && <Cards weatherinfo={apidata}  data ={data} />}
             </div>
         </div>
     );
