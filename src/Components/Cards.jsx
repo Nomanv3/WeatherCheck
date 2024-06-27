@@ -14,7 +14,7 @@ const Cards = ({ weatherinfo }) => {
   //  let index = weatherinfo.current.condition[2]
   //  console.log(index)
   
-//  console.log(weatherinfo)
+ console.log(weatherinfo)
    
   useEffect(()=>{
     
@@ -47,14 +47,15 @@ const Cards = ({ weatherinfo }) => {
  
 
   return (
-    <div className="bg-red-200 w-[40%] h-[54vh] rounded-md overflow-hidden flex flex-col text-align-center">
+    <div className="bg-red-200 w-[50%] h-[54vh]  rounded-3xl overflow-hidden flex flex-col text-align-center">
       <div className="w-full h-14  bg-red-400 flex gap-2 items-center p-2">
-        <h1 className="city font-extrabold text-3xl text-white">{locations?.country}</h1>,
-        <h1 className="state text-3xl font-extrabold text-white">{locations.region}</h1>
-        <h1 className="state text-xl font-bold text-white p-2">{locations?.localtime}</h1>
+        <h1 className="city font-extrabold text-3xl  text-zinc-100">{locations?.country}</h1>,
+        <h1 className="state text-2xl font-extrabold text-zinc-100">{locations.region}</h1>
+        <h1 className="city text-2xl font-semibold text-white">{locations?.name}</h1>
+        <h1 className="state text-1xl font-bold text-white p-2">{locations?.localtime}</h1>
       </div>
       <div className="flex flex-col item-center px-3">
-        <h2 className="Degree text-6xl font-bold p-4">32°</h2>
+        <h2 className="Degree text-6xl font-bold p-4">{currents?.temp_c}°</h2>
         <h1 className="text-3xl">{currents?.condition?.text}</h1>
         <div className="flex text-3xl font-bold w-full justify-between px-3 ">
           <div>
